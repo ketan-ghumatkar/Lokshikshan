@@ -1,0 +1,40 @@
+<div class="well col-lg-7 col-lg-offset-2">
+  <%= form_tag "/", method: :get, class: "form-horizontal" do %>
+    <fieldset>
+      <legend>Prabhag List</legend>
+      <div class="col-lg-7 pull-left">
+        <%= select_tag "prabhag", options_for_select(@prabhags, params[:prabhag]), class: "form-control prabhag-list" %>
+        <span class="help-block">Select any of the prabhag to get list of matadars.</span>
+      </div>
+      <div class="col-lg-1 pull-left ">
+        <%= submit_tag "Submit", class: "btn btn-primary" %>
+      </div>
+      <div class="clearfix"></div>
+    </fieldset>
+  <% end %>
+</div>
+<div class="col-lg-7 col-lg-offset-2 well">
+  <div class="table-responsive">
+    <table class="table table-hover matadar-table">
+      <caption class="bagawa">Matadar List(<%= @matadars.count %>)</caption>
+      <thead>
+        <tr>
+          <th>#</th>        
+          <th>Name</th>        
+          <th>Address</th>        
+          <th>Age</th>        
+        </tr>
+      </thead>
+      <tbody>
+        <% @matadars.each_with_index do |m, idx| %>
+        <tr>
+          <td><%= idx + 1 %></td>
+          <td class="prabhag-list"><%= m.name %></td>
+          <td><%= m.address %></td>
+          <td><%= m.age %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
