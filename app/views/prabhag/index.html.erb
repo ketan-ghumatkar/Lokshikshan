@@ -2,11 +2,21 @@
   <%= form_tag "/", method: :get, class: "form-horizontal" do %>
     <fieldset>
       <legend>Prabhag List</legend>
-      <div class="col-lg-7 pull-left">
-        <%= select_tag "prabhag", options_for_select(@prabhags, params[:prabhag]), class: "form-control prabhag-list" %>
-        <span class="help-block">Select any of the prabhag to get list of matadars.</span>
-      </div>
-      <div class="col-lg-1 pull-left ">
+        <div class="form-group">
+          <label for="prabhagFor" class="col-lg-2 control-label">Prabhag List</label>
+          <div class="col-lg-5">
+            <%= select_tag "prabhag", options_for_select(@prabhags, params[:prabhag]), class: "form-control prabhag-list", id: "prabhagFor" %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="searchFor" class="col-lg-2 control-label">Search World</label>
+          <div class="col-lg-5">
+            <%= text_field_tag :search, params[:search], class: "form-control search-world", id: "searchFor" %>
+          </div>
+        </div>
+
+      <div class="col-lg-1 col-lg-offset-2">
         <%= submit_tag "Submit", class: "btn btn-primary" %>
       </div>
       <div class="clearfix"></div>
