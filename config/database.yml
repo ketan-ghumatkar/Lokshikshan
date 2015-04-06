@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql2
+  adapter: pg
   username: root
   password: root
   host: localhost
