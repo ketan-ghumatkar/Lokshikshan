@@ -1,28 +1,27 @@
-<div class="well col-lg-5 col-lg-offset-2">
+<div class="well col-lg-5">
   <%= form_tag "/", method: :get, class: "form-horizontal" do %>
     <fieldset>
       <legend>मतदार शोध</legend>
         <div class="form-group">
-          <label for="autocomplete" class="col-lg-2 control-label pull-left">शब्द शोधा</label>
           <div class="col-lg-5 pull-left">
-            <%= text_field_tag :search, params[:search], class: "form-control search-world pull-left", id: "autocomplete" %>
+            <%= text_field_tag :search, params[:search], class: "form-control search-world", id: "autocomplete" %>
           </div>
-          <%= submit_tag "Submit", class: "btn btn-primary pull-left", value: "शोधा" %>
             <div class="clearfix"></div>
         </div>
+          <%= submit_tag "Submit", class: "btn btn-primary", value: "शोधा" %>
     </fieldset>
   <% end %>
 </div>
-<div class="col-lg-5 col-lg-offset-2 well">
+<div class="col-lg-5 well">
   <div class="table-responsive">
     <table class="table table-hover table-striped matadar-table">
       <caption class="bagawa">मतदार यादी(<%= @matadars.count %>)</caption>
       <thead>
         <tr>
-          <th>अ.क्र</th>        
-          <th>मतदाराचे नाव</th>        
-          <th>यादीतील अ.क्र</th>        
-          <th>वय</th>        
+          <th style="font-size: 12px;">अ.क्र</th>        
+          <th style="font-size: 12px;">मतदाराचे नाव</th>        
+          <th style="font-size: 12px;">यादीतील अ.क्र</th>        
+          <th style="font-size: 12px;">वय</th>        
         </tr>
       </thead>
       <tbody>
@@ -30,7 +29,7 @@
         <tr>
           <td><%= idx + 1 %></td>
           <td class="prabhag-list"><%= m.name %></td>
-          <td><%= m.list_index %></td>
+          <td style="font-size: 20px;"><%= m.list_index %></td>
           <td><%= m.age %></td>
         </tr>
         <% end %>
