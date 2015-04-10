@@ -34,7 +34,7 @@
 	color: white;
 }
 .prabhag-list {
-	font-size: 16px;
+	font-size: 25px;
 }
 .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
 .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }

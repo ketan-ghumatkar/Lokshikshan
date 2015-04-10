@@ -1,4 +1,4 @@
-<div class="well col-lg-5">
+<div class="well col-lg-5 col-lg-offset-2">
   <%= form_tag "/", method: :get, class: "form-horizontal" do %>
     <fieldset>
       <legend>मतदार शोध</legend>
@@ -13,7 +13,7 @@
     </fieldset>
   <% end %>
 </div>
-<div class="col-lg-5 well">
+<div class="col-lg-5 col-lg-offset-2 well">
   <div class="table-responsive">
     <table class="table table-hover table-striped matadar-table">
       <caption class="bagawa">मतदार यादी(<%= @matadars.count %>)</caption>
