@@ -1,22 +1,22 @@
-<div class="well col-lg-7 col-lg-offset-2">
+<div class="well col-lg-5 col-lg-offset-2">
   <%= form_tag "/", method: :get, class: "form-horizontal" do %>
     <fieldset>
-      <legend>Prabhag List</legend>
+      <legend>मतदार शोध</legend>
         <div class="form-group">
-          <label for="autocomplete" class="col-lg-2 control-label pull-left">Search World</label>
+          <label for="autocomplete" class="col-lg-2 control-label pull-left">शब्द शोधा</label>
           <div class="col-lg-5 pull-left">
             <%= text_field_tag :search, params[:search], class: "form-control search-world pull-left", id: "autocomplete" %>
           </div>
-          <%= submit_tag "Submit", class: "btn btn-primary pull-left" %>
+          <%= submit_tag "Submit", class: "btn btn-primary pull-left", value: "शोधा" %>
             <div class="clearfix"></div>
         </div>
     </fieldset>
   <% end %>
 </div>
-<div class="col-lg-7 col-lg-offset-2 well">
+<div class="col-lg-5 col-lg-offset-2 well">
   <div class="table-responsive">
-    <table class="table table-hover matadar-table">
-      <caption class="bagawa">Matadar List(<%= @matadars.count %>)</caption>
+    <table class="table table-hover table-striped matadar-table">
+      <caption class="bagawa">मतदार यादी(<%= @matadars.count %>)</caption>
       <thead>
         <tr>
           <th>अ.क्र</th>        

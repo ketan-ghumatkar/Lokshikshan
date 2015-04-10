@@ -14,9 +14,6 @@
  *= require_self
  */
 
-.prabhag-list, .matadar-table, .search-world {
-  font-family: "DVB-TTDhruv"
-}
 .content-wrapper {
 	margin-right: 0;
 	margin-left: 0;
@@ -33,7 +30,13 @@
 .container {
 	margin-top: 104px;
 }
-
+.appTitle {
+	color: white;
+	margin-left: 100px;
+}
+.prabhag-list {
+	font-size: 16px;
+}
 .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
 .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
 .autocomplete-selected { background: #F0F0F0; }
