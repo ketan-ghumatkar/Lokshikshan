@@ -3,23 +3,13 @@
     <fieldset>
       <legend>Prabhag List</legend>
         <div class="form-group">
-          <label for="prabhagFor" class="col-lg-2 control-label">Prabhag List</label>
-          <div class="col-lg-5">
-            <%= select_tag "prabhag", options_for_select(@prabhags, params[:prabhag]), class: "form-control prabhag-list", id: "prabhagFor" %>
+          <label for="autocomplete" class="col-lg-2 control-label pull-left">Search World</label>
+          <div class="col-lg-5 pull-left">
+            <%= text_field_tag :search, params[:search], class: "form-control search-world pull-left", id: "autocomplete" %>
           </div>
+          <%= submit_tag "Submit", class: "btn btn-primary pull-left" %>
+            <div class="clearfix"></div>
         </div>
-
-        <div class="form-group">
-          <label for="searchFor" class="col-lg-2 control-label">Search World</label>
-          <div class="col-lg-5">
-            <%= text_field_tag :search, params[:search], class: "form-control search-world", id: "searchFor" %>
-          </div>
-        </div>
-
-      <div class="col-lg-1 col-lg-offset-2">
-        <%= submit_tag "Submit", class: "btn btn-primary" %>
-      </div>
-      <div class="clearfix"></div>
     </fieldset>
   <% end %>
 </div>
@@ -29,10 +19,10 @@
       <caption class="bagawa">Matadar List(<%= @matadars.count %>)</caption>
       <thead>
         <tr>
-          <th>#</th>        
-          <th>Name</th>        
-          <th>Address</th>        
-          <th>Age</th>        
+          <th>अ.क्र</th>        
+          <th>मतदाराचे नाव</th>        
+          <th>यादीतील अ.क्र</th>        
+          <th>वय</th>        
         </tr>
       </thead>
       <tbody>
@@ -40,7 +30,7 @@
         <tr>
           <td><%= idx + 1 %></td>
           <td class="prabhag-list"><%= m.name %></td>
-          <td><%= m.address %></td>
+          <td><%= m.list_index %></td>
           <td><%= m.age %></td>
         </tr>
         <% end %>

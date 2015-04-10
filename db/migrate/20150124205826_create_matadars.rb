@@ -4,8 +4,13 @@ class CreateMatadars < ActiveRecord::Migration
 
       t.timestamps null: false
       t.string :name
-      t.text :address
-      t.integer :age 
+      t.string :age
+      t.string :list_index
+      t.string :phone_number 
+      t.string :page_number
     end
+    
+    add_index :matadars, [:name, :list_index, :page_number]
   end
+
 end

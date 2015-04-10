@@ -13,12 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20150124205826) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "matadars", force: :cascade do |t|
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.string   "name",       limit: 255
-    t.text     "address",    limit: 65535
-    t.integer  "age",        limit: 4
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "name"
+    t.string   "age"
+    t.string   "list_index"
+    t.string   "phone_number"
+    t.string   "page_number"
   end
+
+  add_index "matadars", ["name", "list_index", "page_number"], name: "index_matadars_on_name_and_list_index_and_page_number", using: :btree
 
 end
