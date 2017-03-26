@@ -1,2 +1,2 @@
 # Lokshikshan
-Web Application for listing the ward wise voters includes listing, search
+Web Application for listing the ward wise voters includes listing, search, etc.
